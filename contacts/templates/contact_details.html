@@ -1,0 +1,8 @@
+{% extends 'base.html'%} {%block content %}
+<h1>{{obj.firstName|capfirst}} {{obj.lastName|capfirst}}</h1>
+<p>{{obj.phoneNumber}}</p>
+<p>{{obj.email}}</p>
+<p>{{obj.address}}</p>
+<button><a href="{{obj.get_delete_url}}">Delete contact</a></button>
+<button><a href="{{obj.get_edit_url}}">Edit contact</a></button>
+{%endblock %}

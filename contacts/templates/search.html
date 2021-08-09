@@ -1,0 +1,9 @@
+{% extends 'base.html'%} {%block content %} {% for message in messages %}
+{% endfor %}
+<form method="GET" action="{% url 'search-results' %}">
+  {% csrf_token %}
+  <input type="text" name="q" placeholder="Search..." />
+  <input type="submit" value="Search" />
+</form>
+
+{%endblock %}
